@@ -231,7 +231,7 @@
 
 = A Proof of Monsky's Theorem<monsky>
 
-In the introduction, a brief history of Stein's Conjecture was presented. This history gave the origins of Stein's Conjecture in Monsky's Theorem. The proof of this theorem provides a convienient yet sufficiently complex problem for the introduction of many lemmas which are relevant to Stein's Conjecture.
+In the introduction, a brief history of Stein's Conjecture was presented. This history gave the origins of Stein's Conjecture in Monsky's Theorem. The proof of this theorem provides a convenient yet sufficiently complex problem for the introduction of many lemmas which are relevant to Stein's Conjecture.
 
 #theorem([Monsky])[
   There exists a division of the square into $n$ triangles of equal area if and only if $n$ is odd.
@@ -239,9 +239,9 @@ In the introduction, a brief history of Stein's Conjecture was presented. This h
 
 While Monsky's Theorem has been extensively written about, it is often hard for the reader to piece together the story of the theorem. Monsky's Theorem makes heavy use of a function known as $p$-adic valuation, which will be introduced in @p-adic. The $p$-adic valuation is most often employed in the fields of number theory and analysis, and it is difficult to understand the role which it plays in the proof of such a theorem, which is at surface level geometric. Even if the reader is thoroughly convinced by the logic of the argument presented, they may still find themselves asking the question: why is the $p$-adic valuation necessary for the proof of Monsky's Theorem? The proof of Monsky's Theorem which is presented intends to thoroughly justify the proof's deep involvement with the $p$-adic valuation.
 
-To further this goal we will introduce the $p$-adic valuation into the context of Monsky's Theorem in a manner which is careful to not only provide mathematical rigor, but to provide motivation for the use of each piece of technology utilized in our proof of Monsky's Theorem. Aditionally, this chapter presents a new perspective on the proof of Monsky's Theorem utilizing Aaron Abram and Jamie Pommersheims Non-Abelian Sperner's Lemma will be presented. This perspective allows the reader to perform a step by step approach on abritrary divisions of the square into odd numbers of triangles which completes with the discovery of a triangle which cannot be a member of a division of the square into an odd number of triangles of equal area.
+To further this goal we will introduce the $p$-adic valuation into the context of Monsky's Theorem in a manner which is careful to not only provide mathematical rigor, but to provide motivation for the use of each piece of technology utilized in our proof of Monsky's Theorem. Additionally, this chapter presents a new perspective on the proof of Monsky's Theorem utilizing Aaron Abram and Jamie Pommersheims Non-Abelian Sperner's Lemma will be presented. This perspective allows the reader to perform a step by step approach on arbitrary divisions of the square into odd numbers of triangles which completes with the discovery of a triangle which cannot be a member of a division of the square into an odd number of triangles of equal area.
 
-Monsky's Theorem is deeply engaged with the idea of parity, as it is a statement of the parity of divisions of the square into triangles of equal area. In @dissctsq we will show that the inverse of the area of any given triangle in a division of the square into $n$-triangles has the same parity as $n$. Then, in @graphsq, we will utilize this fact to motivate a view of divisions of the square into triangles as graphs. We will then study the $p$-adic metric in @p-adic which we will utilize to provide a measurement of the parity of a triangles area in the view of divisions of the square as graphs in @coloringsection. We will then utilize the measurement of parity which we have presented to measure the parity of the square itsself, which we will relate to the parity of a triangle which we can find in any division of the square into triangles in @boundary. Finally we will piece all of these parts together to provide a proof of Monsky's Theorem in @monskythm.
+Monsky's Theorem is deeply engaged with the idea of parity, as it is a statement of the parity of divisions of the square into triangles of equal area. In @dissctsq we will show that the inverse of the area of any given triangle in a division of the square into $n$-triangles has the same parity as $n$. Then, in @graphsq, we will utilize this fact to motivate a view of divisions of the square into triangles as graphs. We will then study the $p$-adic metric in @p-adic which we will utilize to provide a measurement of the parity of a triangles area in the view of divisions of the square as graphs in @coloringsection. We will then utilize the measurement of parity which we have presented to measure the parity of the square itself, which we will relate to the parity of a triangle which we can find in any division of the square into triangles in @boundary. Finally we will piece all of these parts together to provide a proof of Monsky's Theorem in @monskythm.
 
 == Dissections of the Square<dissctsq>
  
@@ -458,7 +458,7 @@ Monsky's Theorem is interested in a particular manner of dissecting the square, 
   )
 ]
 
-Notice that all of these equidissections have an even number of triangles. As an illuminating excersize in futility, the reader is invited to attempt to draw such an odd equidissection. The rare reader which attempts such an excersize in futility after being instructed to by a mathematical text will note the following: It is seemingly impossible to construct a dissection of the square into an odd number of triangles of equal area. This property gives rise to the following proposition originally proposed by Fred Richman, which we will later prove as _Monsky's Theorem_.
+Notice that all of these equidissections have an even number of triangles. As an illuminating exercise in futility, the reader is invited to attempt to draw such an odd equidissection. The rare reader which attempts such an exercise in futility after being instructed to by a mathematical text will note the following: It is seemingly impossible to construct a dissection of the square into an odd number of triangles of equal area. This property gives rise to the following proposition originally proposed by Fred Richman, which we will later prove as _Monsky's Theorem_.
 
 #proposition([Richman])[
   Any equidissection of the square contains an even number of triangles.
@@ -476,7 +476,7 @@ This allows us to in turn rephrase our statement of Monsky's Theorem to utilize 
   Any dissection of the square $T$ with an odd number of triangles contains at least one triangle $t$ with area not equal to $1/n$.
 ]
 
-The rephrasing of the theorem provides a more forward suggestion for how we should go about our proof. We start with an abitrary dissection $T$ of the square with an odd number of triangles. We then find a triangle in $T$ such that its area is not one of $1/3, 1/5, 1/7, ...$. In the next section we will begin to explore a combinatorial view of this problem. This view will lead us on a path which eventually ends in finding such a triangle in any given dissection.#margin-note[strengthen this transition]
+The rephrasing of the theorem provides a more forward suggestion for how we should go about our proof. We start with an arbitrary dissection $T$ of the square with an odd number of triangles. We then find a triangle in $T$ such that its area is not one of $1/3, 1/5, 1/7, ...$. In the next section we will begin to explore a combinatorial view of this problem. This view will lead us on a path which eventually ends in finding such a triangle in any given dissection.#margin-note[strengthen this transition]
 
 == A Combinatorial Perspective on Dissections<graphsq>
 
@@ -532,7 +532,7 @@ We will define combinatorial polygons as graphs which contain only a cycle of le
   @abrams_integer_2024 A _combinatorial $n$-gon_ is an abstract cycle graph $G$ with $n$ vertices; a _combinatorial polygon_ is a combinatorial $n$-gon for some $n$.
 ]
 
-We will consider triangulations, the combinatorial equivalent of a dissection, of a combinatorial polygon to simply be any graph whos boundary is a combinatorial polygon, can be plotted on the real plane without intersection, and is made up of combinatorial triangles.
+We will consider triangulations, the combinatorial equivalent of a dissection, of a combinatorial polygon to simply be any graph whose boundary is a combinatorial polygon, can be plotted on the real plane without intersection, and is made up of combinatorial triangles.
 
 #definition[
   @abrams_integer_2024 A _triangulation_ of a combinatorial polygon $G$ consists of a collection $T$ of $3$-element sets called triangles, such that the underlying space $|T|$ built out of triangles is a topological disk with boundary equal to $G$. The boundary vertices are called corners.
@@ -613,7 +613,7 @@ However, we do not require full information regarding the area of each triangle 
 
 In the previous section we introduced a combinatorial view of the division of the polygon into triangles. This division allows us to relate triangles to their neighbours in a given division of a polygon, but lacks area information. However, we don't require full information of the area of a triangle in a division. We only need to know if the area of such a triangle is the inverse of an odd integer. The $p$-adic valuation will allow us to measure if a given triangle achieves this condition.
 
-Notice that we only care if the inverse of a triangles area is odd. While it seems this matter could be adressed via parity argument, notice that a triangles area can be any real number. The $p$-adic valuation is an extension of the idea of parity over the rational and real numbers.
+Notice that we only care if the inverse of a triangles area is odd. While it seems this matter could be addressed via parity argument, notice that a triangles area can be any real number. The $p$-adic valuation is an extension of the idea of parity over the rational and real numbers.
 
 We will begin by introducing the $p$-adic valuation over the integers and incrementally expanding it to the rational, and then real numbers. The $p$-adic valuation measures how many times a given number is divisible by a prime $p$ over the integers. In the following example we will perform this measurement.
 
@@ -802,7 +802,7 @@ We will utilize these three sets to define a structure known as a graph coloring
 //   Let $p*(x_A) > max(p*(x_B), p*(x_C))$ and $p*(y_A) > max(p*(y_B), p*(y_C))$. Then $(p*(x_B - x_A), p*(y_B - y_A) = (p*(x_B), p*(y_B))$ and $(p*(x_C - x_A), p*(y_C - y_A)) = p*(x_C, y_C)$.
 // ]
 
-// So, we will constrain our vertex $(x_A, y_B)$ such that $(p*(x_A), p*(y_A)) > (max(p*(x_B), p*(x_C)), max(p*(y_B), p*(y_C))$. Then, we can assume without loss of generality that $(x_A, y_A) = (0, 0)$. The $p$-adic valuation of the area of a triangle $t$ whos vertices satisfy this constraint are as follows:
+// So, we will constrain our vertex $(x_A, y_B)$ such that $(p*(x_A), p*(y_A)) > (max(p*(x_B), p*(x_C)), max(p*(y_B), p*(y_C))$. Then, we can assume without loss of generality that $(x_A, y_A) = (0, 0)$. The $p$-adic valuation of the area of a triangle $t$ whose vertices satisfy this constraint are as follows:
 
 // $
 // p*("Area" t) &= p*(1/2) + p*(x_A y_B - x_A y_C + x_B y_C - x_B y_A + x_C y_A - x_C y_B) \
@@ -932,11 +932,11 @@ Now, all we need to show is that any three colored triangle $t$ in a triangulati
 We can now proceed to the finale of this section by showing that any 3-colored triangle in a triangulation of the square colored by the $2$-adic coloring function cannot be a member of an odd-equidissection.
 
 #corollary[
-  Let $T$ be a dissection of the square whos corresponding triangulation $G$ contains $n$ triangles where $n$ is odd and a three colored triangle $t$ relative to $C_2$. Then $T$ is not an equidissection.
+  Let $T$ be a dissection of the square whose corresponding triangulation $G$ contains $n$ triangles where $n$ is odd and a three colored triangle $t$ relative to $C_2$. Then $T$ is not an equidissection.
 ]<complete1>
 
 #proof[
-  Our triangle $t$ is three colored relative to $C_2$ so $2* ("Area of" t) <= 1/2$. Also, $2* (1/n) = 0$ since $n$ is odd. Therefore $T$ is not an equidissection since $t$ corresponds to a triangle in $T$ whos area is inconsistant with an equidissection.
+  Our triangle $t$ is three colored relative to $C_2$ so $2* ("Area of" t) <= 1/2$. Also, $2* (1/n) = 0$ since $n$ is odd. Therefore $T$ is not an equidissection since $t$ corresponds to a triangle in $T$ whose area is inconsistent with an equidissection.
 ]
 
 In the next section we will complete our introduction of lemmas necessary to prove Monsky's Theorem by finding a three colored triangle relative to the $2$-adic coloring function in every division of the square into triangles.
@@ -1407,7 +1407,7 @@ This representation reveals the underlying property of affine transformations wh
 
 However, we run into one problem which requires us to slightly restrict the scope of transformations which we investigate. If the linear component of an affine transformation has a determinant which is zero, it maps all polygons to a line, which for the purposes of dissection is nonsensical. Moving forward we will consider only affine transformations with non-zero determinant.
 
-The result of any affine transformation applied to the square with non-zero determinant is a parallelogram. Parallelograms are made distinct from other quadrilaterals by the fact that each edge of a parallelogram has a coresponding parallel edge which is equal in length. By extending this property to $n$-gons we derive our definition of the balanced polygon.
+The result of any affine transformation applied to the square with non-zero determinant is a parallelogram. Parallelograms are made distinct from other quadrilaterals by the fact that each edge of a parallelogram has a corresponding parallel edge which is equal in length. By extending this property to $n$-gons we derive our definition of the balanced polygon.
 
 #definition[
   An polygon $P$ with a counterclockwise boundary is considered _balanced_ if it can be divided into pairs of edges $(u, v)$ such that $u$ and $v$ are parallel, equal in length, and have opposite orientation.@rudenko_equidissection_2012 #margin-note[Are the conditions other than parallel necessary?]
@@ -1464,7 +1464,7 @@ A core property of area preserving affine transformations is that they preserve 
 Another way to construct new balanced polygons is by tiling multiple balanced polygons together along congruent edges.
 
 #proposition[
-  Any tiling of any abritrary collection of balanced polygons in which two balanced polygons are joined only across congruent edges is a balanced polygon.
+  Any tiling of any arbitrary collection of balanced polygons in which two balanced polygons are joined only across congruent edges is a balanced polygon.
 ]
 
 #example[
@@ -1564,7 +1564,7 @@ However, you may notice that the above counter-example is made up of the union o
   caption: [A balanced polygon and its decomposition into parallelograms.],
 )
 
-We will define a _decomposition_ of a balanced polygon as a set of potentially intersecting parallelograms whos union is equal to our balanced parallelograms.
+We will define a _decomposition_ of a balanced polygon as a set of potentially intersecting parallelograms whose union is equal to our balanced parallelograms.
 
 #definition[
   Let $P$ be an combinatorial polygon, and $cal(P)$ be a set of parallelograms where for all $p in P$. Then, a set of parallelograms $cal(P)$ is a _decomposition_ of $P$ into parallelograms if $P = union.big_(p in cal(P)) p$.
@@ -1620,9 +1620,9 @@ Daniil Rudenko has proven this conjecture for a subset of balanced polygons whic
 
 We will provide a proof of this theorem in the next chapter, as this proof is the basis for most all modern exploration of Stein's Conjecture.
 
-The study of polyominos was seperated from previous explorations of polygons which only have even equidissections by the fact that they are potentially concave. Stein utilized this to present his present, open conjecture on the equidissection of balanced polygons by relaxing the requirements present in the class of centrally symmetric polygons which are not present in polyominos. These special properties of polyominos is that they are potentially concave, and that they are not necessarily symmetric about a central point. Instead of a symmetric property, that can be divided into pairs of edges which are parallel and of equal length.
+The study of polyominos was separated from previous explorations of polygons which only have even equidissections by the fact that they are potentially concave. Stein utilized this to present his present, open conjecture on the equidissection of balanced polygons by relaxing the requirements present in the class of centrally symmetric polygons which are not present in polyominos. These special properties of polyominos is that they are potentially concave, and that they are not necessarily symmetric about a central point. Instead of a symmetric property, that can be divided into pairs of edges which are parallel and of equal length.
 
-The category of all balanced polygons is broad, so all attempts to prove Stein's conjecture have instead focused on subsets of this conjecture. The most comprehensive result proven so far is a result by Daniil Rudenko on balanced polygons whos vertices lay upon the integer lattice.
+The category of all balanced polygons is broad, so all attempts to prove Stein's conjecture have instead focused on subsets of this conjecture. The most comprehensive result proven so far is a result by Daniil Rudenko on balanced polygons whose vertices lay upon the integer lattice.
 
 #definition[
   A polygon $P$ is considered a _lattice polygon_ if for every vertex $(x, y) in P$, both $x, y in ZZ$. The vertices of such a polygon all lay on the integer lattice $ZZ^2$.
@@ -1676,13 +1676,13 @@ To begin, we will study the structure of a given polyomino. Recall that polyomin
   )
 ]
 
-We will normalize the set of polyominos which we are studying, by only investigating polygons whos component cells are the unit square.
+We will normalize the set of polyominos which we are studying, by only investigating polygons whose component cells are the unit square.
 
 #proposition[
-  Let $P$ be a polyomino, then there exists an area preserving affine transformation $A$ such that any cell of the polyomino $A(P)$ is a square of side length one whos vertices lie upon the integer lattice $ZZ^2$.
+  Let $P$ be a polyomino, then there exists an area preserving affine transformation $A$ such that any cell of the polyomino $A(P)$ is a square of side length one whose vertices lie upon the integer lattice $ZZ^2$.
 ]
 
-For convienience, we will assume our polyominos to lie upon the integer lattice and be constructed of unit squares. We will call such polyominos _lattice polyominos_.
+For convenience, we will assume our polyominos to lie upon the integer lattice and be constructed of unit squares. We will call such polyominos _lattice polyominos_.
 
 #definition[
   A lattice polyomino is any polyomino who's vertices all lay on the integer lattice $ZZ^2$.
@@ -1705,7 +1705,7 @@ We will first define the direction of an $A B$ edge on the boundary word. Recall
 This will allow us to define the cell coloring function, which counts if a cell has an counter-clockwise $A B$ edge, a clockwise $A B$ edge, or no $A B$ edges.
 
 #definition[
-  We then define the cell valueing function $cal(C)$ from the set of cells on the integer lattice to the integers as follows: Assign the value $+1$ to a counterclockwise $A B$ edge and the value $-1$ to a clockwise $A B$ edge. Assing a value of $+1$ to a cell if the sum of the values of its $A B$ edges is $+1$, and $-1$ if it is $-1$ and $0$ if the sum is $0$.
+  We then define the cell valueing function $cal(C)$ from the set of cells on the integer lattice to the integers as follows: Assign the value $+1$ to a counterclockwise $A B$ edge and the value $-1$ to a clockwise $A B$ edge. Assign a value of $+1$ to a cell if the sum of the values of its $A B$ edges is $+1$, and $-1$ if it is $-1$ and $0$ if the sum is $0$.
 ]
 
 Since the value of a cell counts the number of $A B$ edges with clockwise or counterclockwise orientation present in a given cell, we can utilize this to show that the value of the boundary word of a polyomino is equivalent to the sum of the values of its cells. Notice further that a boundary word is contractible if and only if its value is equal to $0$. This allows us to show that any polygon containing an inequal number of $+1$ and $-1$ cells has non-contractible boundary word.
@@ -1872,7 +1872,7 @@ Since the pattern of $A$ colored points on the integer lattice $ZZ^2$ is depende
 // ]
 
 // #proof[
-//   Let $C$ be a cell whos lower right corner is colored $A$, then $C$ is one of the following squares:
+//   Let $C$ be a cell whose lower right corner is colored $A$, then $C$ is one of the following squares:
 
 //   #align(center)[
 //     #stack(
@@ -1947,7 +1947,7 @@ Now, we are looking for polyominos in which there exists some affine transformat
   A polyomino $T$ is $m$-balanced if for every value of the positive integers $r$ and $s$ such that $r + s = m$ the count of $+1$ valued cells is equal to the count of $-1$ valued cells.
 ]
 
-Notice that for a given value of $m$, and any $r, s in ZZ^+$ such that $r + s = m$, the pattern of valuing on cells repeats every $2^(m + 1)$. We will utilize this fact to represent polyominos as matricies, where a zero in a given cell of the matrix represents there is no cell present at this location in the polyomino, and a one represents there is a cell present at this location in the polyomino. Since the pattern of coloring repeats every $2^(m+1)$ cells, we can represent our polyomino in a matrix which is $2^(m+1)$ cells wide and tall. This represents instead how many cells there are in a polyomino whos coordinates fall upon a certain location in our value pattern.
+Notice that for a given value of $m$, and any $r, s in ZZ^+$ such that $r + s = m$, the pattern of valuing on cells repeats every $2^(m + 1)$. We will utilize this fact to represent polyominos as matrices, where a zero in a given cell of the matrix represents there is no cell present at this location in the polyomino, and a one represents there is a cell present at this location in the polyomino. Since the pattern of coloring repeats every $2^(m+1)$ cells, we can represent our polyomino in a matrix which is $2^(m+1)$ cells wide and tall. This represents instead how many cells there are in a polyomino whose coordinates fall upon a certain location in our value pattern.
 
 #definition[
   The matrix C associated with a polyomino $T$ and an $m in ZZ$ is defined as $c_(i j) = sum_(i' equiv i mod 2^(m + 1)) sum_(j' equiv j mod 2^(m+1))#margin-note[you gotta come back and fix these summations] chi_(i' j')(T).$
@@ -1983,7 +1983,7 @@ Notice that for a given value of $m$, and any $r, s in ZZ^+$ such that $r + s = 
       1, 1, 0, 0;
     ).
   $
-  For $m = 2$, the coresponding matrix to $T$ is:
+  For $m = 2$, the corresponding matrix to $T$ is:
   $ mat(
     4, 4;
     2, 2;
@@ -1992,7 +1992,7 @@ Notice that for a given value of $m$, and any $r, s in ZZ^+$ such that $r + s = 
 
 In other words, $c_(i j)$ counts how many times the $(i, j)$-th cell of a $m times m$ torus is covered when a polyomino $T$ is placed on its surface.
 
-We will then define a function based on this matrix which counts the number of cells a given polyomino $P$ has which are present in a given position of the repetetive coloring pattern defined by a certain $r$ and $s$.
+We will then define a function based on this matrix which counts the number of cells a given polyomino $P$ has which are present in a given position of the repetitive coloring pattern defined by a certain $r$ and $s$.
 
 #definition[
   We define the function
@@ -2058,7 +2058,7 @@ As we continue with these contraction steps, we are eventually presented with a 
   Now, suppose for some $m - 1$ the three statements which we are performing induction upon hold true. Consider the matrix $alpha(C)$ defined by $alpha_(i j)(C) = sum_(i' equiv i mod 4) sum_(j' equiv j mod 2) c_(i j)$. Notice that the matrix $tilde(alpha) = mat(
     alpha_(0 1), alpha_(1 1);
     alpha_(0 0), alpha_(1 0);
-  ) = beta(C')$. Since $C'$ is $(m - 1)$-balanced, by our previous assumption $beta(C') = tilde(alpha)$ satisfies the condition that the sum of its entries are divisible by $2^(m)$ and that both the sums $alpha_(0 0) + alpha_(1 1)$ and $alpha_(0 1) + alpha_(1 0)$ are divisible by $2^(m - 1)$. This implies that $alpha_(00) equiv alpha_(20) mod 2^(m - 1)$. Then $alpha_(00) + alpha_(20) = beta_(00)$ is divisible by $2^(m - 1)$ since each of these are divisible by $2^(m-2)$. We can use a similar argument to show that the rest of the elements of $beta(C)$ are divisible by $2^(m-1)$. Thus, we have shown that the first statement holds true for $m$. Now, notice that by our supposition, the sum of each column of $alpha(C)$ is divisible by $2^(m - 1)$ and that the sum of any two adjacent columns is divisible by $2^m$. Notice that $beta_(00) + beta_(01) = alpha_(00) + alpha_(20) + alpha_(01) + alpha_(21)$. Then the sum of the first column of $beta(C)$ is divisible by $2^m$. Via a similar argument we can establish divisibility by $2^m$ for the rest of the rows and colums of $beta(C)$. This implies $beta_(00) + beta_(01) equiv 0$ or $2^m$ $mod 2^(m + 1)$, and similarly for the sum $beta_(10) + beta_(11)$. Recall that $C$ is balanced, so $beta_(00) + beta_(11) = beta_(01) + beta_(10)$. So, $beta_(00) + beta_(01) = beta_(10) + beta_(11)$. Suppose $beta_(00) + beta_(01) + beta_(10) + beta_(11)$ is not divisible by $2^(m + 1)$. Then $beta_(00) + beta_(01) equiv.not beta_(10) + beta_(11) mod 2^(m + 1)$. WLOG assume $beta_(00) + beta_(01) equiv 0 mod 2^(m + 1)$. Then $beta_(00) + beta_(11) equiv 2^(m - 1) mod 2^m$. Then $beta_(11) equiv 2^(m - 1) - beta_(00)$. Also, $beta_(01) equiv - beta_(00) mod 2^m$. Then $beta_(01) + beta_(11) equiv 2^(m - 1) mod 2^m$ which is a contradiction of the fact that all of the row and colum sums of $beta(C)$ are divisible by $2^m$. Then $beta_(00) + beta_(01) + beta_(10) + beta_(11)$ is divisible by $2^(m + 1)$ and our result follows via induction.
+  ) = beta(C')$. Since $C'$ is $(m - 1)$-balanced, by our previous assumption $beta(C') = tilde(alpha)$ satisfies the condition that the sum of its entries are divisible by $2^(m)$ and that both the sums $alpha_(0 0) + alpha_(1 1)$ and $alpha_(0 1) + alpha_(1 0)$ are divisible by $2^(m - 1)$. This implies that $alpha_(00) equiv alpha_(20) mod 2^(m - 1)$. Then $alpha_(00) + alpha_(20) = beta_(00)$ is divisible by $2^(m - 1)$ since each of these are divisible by $2^(m-2)$. We can use a similar argument to show that the rest of the elements of $beta(C)$ are divisible by $2^(m-1)$. Thus, we have shown that the first statement holds true for $m$. Now, notice that by our supposition, the sum of each column of $alpha(C)$ is divisible by $2^(m - 1)$ and that the sum of any two adjacent columns is divisible by $2^m$. Notice that $beta_(00) + beta_(01) = alpha_(00) + alpha_(20) + alpha_(01) + alpha_(21)$. Then the sum of the first column of $beta(C)$ is divisible by $2^m$. Via a similar argument we can establish divisibility by $2^m$ for the rest of the rows and columns of $beta(C)$. This implies $beta_(00) + beta_(01) equiv 0$ or $2^m$ $mod 2^(m + 1)$, and similarly for the sum $beta_(10) + beta_(11)$. Recall that $C$ is balanced, so $beta_(00) + beta_(11) = beta_(01) + beta_(10)$. So, $beta_(00) + beta_(01) = beta_(10) + beta_(11)$. Suppose $beta_(00) + beta_(01) + beta_(10) + beta_(11)$ is not divisible by $2^(m + 1)$. Then $beta_(00) + beta_(01) equiv.not beta_(10) + beta_(11) mod 2^(m + 1)$. WLOG assume $beta_(00) + beta_(01) equiv 0 mod 2^(m + 1)$. Then $beta_(00) + beta_(11) equiv 2^(m - 1) mod 2^m$. Then $beta_(11) equiv 2^(m - 1) - beta_(00)$. Also, $beta_(01) equiv - beta_(00) mod 2^m$. Then $beta_(01) + beta_(11) equiv 2^(m - 1) mod 2^m$ which is a contradiction of the fact that all of the row and column sums of $beta(C)$ are divisible by $2^m$. Then $beta_(00) + beta_(01) + beta_(10) + beta_(11)$ is divisible by $2^(m + 1)$ and our result follows via induction.
 ]
 
 We can now prove the final theorem, by tracing these contraction steps in reverse to show that any matrix representing a polyomino cannot be $m$-balanced, showing that there must exist some $r$ and $s$ such that the number of $+1$ squares is inequal to the number of $-1$ squares, providing non-contractibility of the boundary word, allowing us to prove our theorem.
@@ -2270,7 +2270,7 @@ So far we have considered $4$-colored boundary sums, however we can also conside
 == The Area of a Balanced Polygon<area>
 In the previous section we introduced the concept of the boundary sum, and used it to show that a lattice polygon with non-contractible even-odd boundary word has a non-contractible $p$-adic boundary word. In this section we will utilize this theorem to show that a balanced lattice polygon with odd area has a non-contrcatible $p$-adic boundary word, thus proving our result.
 
-Recall that in the first section we showed that any balanced polygon $P$ is made up of a set of possibly overlapping parallelograms whos union is equal to $P$. Taking the sum of these parallelograms would give us an upper bound on the area of $P$, we will use this upper bound to show that the
+Recall that in the first section we showed that any balanced polygon $P$ is made up of a set of possibly overlapping parallelograms whose union is equal to $P$. Taking the sum of these parallelograms would give us an upper bound on the area of $P$, we will use this upper bound to show that the
 
 #lemma[
   Let $P$ be a lattice parallelogram. The even-odd boundary word of $P$ is contractible if and only if the area of $P$ is even.
@@ -2331,7 +2331,7 @@ We are now able to prove our final theorem.
     overline(P_(i + 1) P_(i + 2))_y, overline(P_(i) P_(i + 1))_y;
   )
   $
-  since the tranposition $tau_i$ either adds the parallelogram $p_i$ to $tau_i(P)$ or removes the parellelogram $p_i$ from $tau_i(P)$ depending on the orientation of the boundary p_i. Also, let the boundary sum of $tau_j(P)$ be $Omega$. Then, $Omega = W - phi_i$ where $phi_i$ is the boundary word of $p_i$. If $phi_i != 0$, then $phi_i = sigma_2 + sigma_3, sigma_4 + sigma_1,$ or $sigma_1 + sigma_2$ and the area of $p$ is odd. Otherwise, the area of $p$ is even and $phi_i = 0$.
+  since the tranposition $tau_i$ either adds the parallelogram $p_i$ to $tau_i(P)$ or removes the parallelogram $p_i$ from $tau_i(P)$ depending on the orientation of the boundary p_i. Also, let the boundary sum of $tau_j(P)$ be $Omega$. Then, $Omega = W - phi_i$ where $phi_i$ is the boundary word of $p_i$. If $phi_i != 0$, then $phi_i = sigma_2 + sigma_3, sigma_4 + sigma_1,$ or $sigma_1 + sigma_2$ and the area of $p$ is odd. Otherwise, the area of $p$ is even and $phi_i = 0$.
 
   Now, consider the permutation $sigma in S_n$ of the side vectors of $P$ in which after every odd indexed side vector, the side vector following it is the side vector which is parallel, congruent, and of opposite orientation to it. It is clear that $sigma (S_n)$ has zero area and boundary sum. Then, $omega = mu_1(sigma_2 + sigma_3) + mu_2(sigma_4 + sigma_1) + mu_3(sigma_1 + sigma_2)$ where $mu_1 + mu_2 + mu_3$ is  equal to the number of transpositions $tau_i$ which make up $sigma$ where $p_i$ has odd area. Notice also that the area of $P$ is made up of all such triangles $p_i$ so $"Area" P equiv mu_1 + mu_2 + mu_3 mod 2$.
 ]
@@ -2591,7 +2591,7 @@ The second limitation is that Rudenko's Approach only applies to polygons which 
 
 == "Lifting" the even-odd mapping
 
-Rudenko's Approach hinges on a modulus $2$ equivalency between the area of a integer area balanced lattice polygon and the number of cycles present in that polygons even-odd boundary word to show that odd area balanced lattice polygons cannot be divided into any odd number of triangles of equal area. If we can draw a modulus $2^n$ equivalency, we can show that any balanced lattice polygon whos area is not a multiple of $2^n$ cannot be divided into any odd number of triangles of equal area. If we showed this for every $n$ we would prove the result for all balanced polygons which lay on the rational lattice.
+Rudenko's Approach hinges on a modulus $2$ equivalency between the area of a integer area balanced lattice polygon and the number of cycles present in that polygons even-odd boundary word to show that odd area balanced lattice polygons cannot be divided into any odd number of triangles of equal area. If we can draw a modulus $2^n$ equivalency, we can show that any balanced lattice polygon whose area is not a multiple of $2^n$ cannot be divided into any odd number of triangles of equal area. If we showed this for every $n$ we would prove the result for all balanced polygons which lay on the rational lattice.
 
 One avenue to show such a result is instead of considering a mod $2$ even odd mapping over lattice polygons, we can consider a mod $2^n$ mapping over lattice polygons. We will refer to such a mod $2^n$ map as the $star_n$ map.
 
@@ -2620,7 +2620,7 @@ Rudenko's approach predates the introduction of Jamie Pommersheim and Aaron Abra
 1. Under $C^4_p$ all dissections of balanced polygons into an odd number of triangles have non-contractible boundary word, or can by carried by area preserving affine transformation to a polygon which has a non-contractible boundary word.
 2. Also, under $C^4_p$ all $3$ colored triangles have area which precludes an odd equidissection.
 
-It is not immediately clear how to satisfy the first property, however, the second property is one which we can easily write down as a series of inequalities which must be satisifed
+It is not immediately clear how to satisfy the first property, however, the second property is one which we can easily write down as a series of inequalities which must be satisfied
 
 #proposition[
   Let $C^4: RR^2 -> {A, B, C, D}$ be a $4$-coloring of the plane. $C^4$ satisfies the property that all $3$-colored triangles have an area which precludes an odd equidissection if and only if the following condition is satisfied:
@@ -2917,10 +2917,10 @@ In our proof of Monsky's theorem an instrumental theorem is that any point of a 
 
 // == Lattice Polygons
 
-// In @rudenko_equidissection_2012, Rudenko studies a subset of Stein's Conjecture for polygons whos vertices lay on an integer grid.
+// In @rudenko_equidissection_2012, Rudenko studies a subset of Stein's Conjecture for polygons whose vertices lay on an integer grid.
 
 // #definition[
-//   A _lattice polygon_ is a polygon whos vertices are integer-valued.
+//   A _lattice polygon_ is a polygon whose vertices are integer-valued.
 // ]
 
 // Rudenko proves the result of Stein's Conjecture for balanced lattice polygons with odd area, if we can prove it for balanced lattice polygons with any integer area, we can prove it for all balanced polygons with rational valued vertices. So, how to remove this odd area restriction?
