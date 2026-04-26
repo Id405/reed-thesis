@@ -220,7 +220,7 @@
 
     Immediately following the results presented by #cite(<kasimatis_dissections_1989>, form: "prose") Stein suggested the results for even $n$ suggest no centrally symmetric polygon has an division into an odd number of triangles of equal area#cite(<stein_equidissections_1989>). This was later proven by #cite(<monsky_conjecture_1990>, form: "prose"). Stein further conjectured that there is no odd division of triangles of equal area for polyominos and shows the conjecture holds true for polyominos with an odd number of triangles@stein_cutting_1999. #cite(<praton_cutting_2002>, form: "prose") proves this conjecture in the general case.#margin-note[This starts to get super dry] Stein then combines the two previous conjectures in #cite(<stein_cutting_2004>, form: "prose") to suggest that no polygon which can be divided into pairs of congruent parallel lines can be divided into an odd number of triangles of equal area. This conjecture has been shown for squares @monsky_dividing_1970, centrally symmetric polygons @kasimatis_dissections_1989, polyominos @praton_cutting_2002, and lattice polygons @rudenko_equidissection_2012, all of which are such polygons. The general case remains open.
 
-    == Contents of this Thesis
+    == Contents of the Thesis
     
     We will begin this text by providing a novel perspective on the proof of Monsky's Theorem in @monsky utilizing Aaron Abrams and Jamie Pommersheim's Non-Abelian Sperner's Lemma, and a more motivated construction of the $p$-adic coloring function typically used in such a proof. We will then present current research into Stein's Conjecture, showing that both polyominos and balanced lattice polygons with odd area have no division into an odd number of triangles of equal area in @generalize.#margin-note[fix chapter names formatting] Finally, we will present suggestions for further direction of research into Stein's Conjecture in @apply.
   ],
@@ -237,16 +237,18 @@ In the introduction, a brief history of Stein's Conjecture was presented. This h
   There exists a division of the square into $n$ triangles of equal area if and only if $n$ is odd.
 ]
 
-While Monsky's Theorem has been extensively written about, it is often hard for the reader to piece together the story of the theorem. Monsky's Theorem makes heavy use of a function known $p$-adic valuation, which will be introduced in @p-adic. The $p$-adic valuation is most often employed in the fields of number theory and analysis, and it is difficult to understand the role which it plays in the proof of such a theorem. Even if the reader grasps, and is thoroughly convinced by the logic of the argument presented, they may still find themselves questioning why the $p$-adic valuation is necessary for the proof of Monsky's Theorem. We will introduce the $p$-adic valuation into the context of divisions of the square into triangles of equal area in a manner which is careful to not only provide mathematical rigor, but to provide motivation for the use of each piece of technology utilized in our proof of Monsky's Theorem. Aditionally, this chapter presents a new perspective on the proof of Monsky's Theorem utilizing Aaron Abram and Jamie Pommersheims Non-Abelian Sperner's Lemma will be presented. This perspective allows the reader to perform a step by step approach on abritrary divisions of the square into odd numbers of triangles which completes with the discovery of a triangle which cannot be a member of a division of the square into an odd number of triangles of equal area.
+While Monsky's Theorem has been extensively written about, it is often hard for the reader to piece together the story of the theorem. Monsky's Theorem makes heavy use of a function known as $p$-adic valuation, which will be introduced in @p-adic. The $p$-adic valuation is most often employed in the fields of number theory and analysis, and it is difficult to understand the role which it plays in the proof of such a theorem, which is at surface level geometric. Even if the reader is thoroughly convinced by the logic of the argument presented, they may still find themselves asking the question: why is the $p$-adic valuation necessary for the proof of Monsky's Theorem? The proof of Monsky's Theorem which is presented intends to thoroughly justify the proof's deep involvement with the $p$-adic valuation.
 
-Since Monsky's Theorem is concerned with the division of the square into triangles, we will begin by studying such divisions of the square into triangles and present the condition for which a division of the square into triangles is a division of the square into triangles of equal area. This condition will motivate a perspective on the problem from the lens of graph theory. However, viewing this problem as one purely on graphs will not provide sufficient information to move forward with our proof. We will use the $p$-adic valuation to construct a coloring in which triangles which are colored in a certain manner cannot be a member of a dissection of the square into an odd number of triangles of equal area. We will then show that such a triangle exists in every dissection of the square into triangles, allowing use to prove our result.
+To further this goal we will introduce the $p$-adic valuation into the context of Monsky's Theorem in a manner which is careful to not only provide mathematical rigor, but to provide motivation for the use of each piece of technology utilized in our proof of Monsky's Theorem. Aditionally, this chapter presents a new perspective on the proof of Monsky's Theorem utilizing Aaron Abram and Jamie Pommersheims Non-Abelian Sperner's Lemma will be presented. This perspective allows the reader to perform a step by step approach on abritrary divisions of the square into odd numbers of triangles which completes with the discovery of a triangle which cannot be a member of a division of the square into an odd number of triangles of equal area.
 
-== Dissections of the Square
+Monsky's Theorem is deeply engaged with the idea of parity, as it is a statement of the parity of divisions of the square into triangles of equal area. In @dissctsq we will show that the inverse of the area of any given triangle in a division of the square into $n$-triangles has the same parity as $n$. Then, in @graphsq, we will utilize this fact to motivate a view of divisions of the square into triangles as graphs. We will then study the $p$-adic metric in @p-adic which we will utilize to provide a measurement of the parity of a triangles area in the view of divisions of the square as graphs in @coloringsection. We will then utilize the measurement of parity which we have presented to measure the parity of the square itsself, which we will relate to the parity of a triangle which we can find in any division of the square into triangles in @boundary. Finally we will piece all of these parts together to provide a proof of Monsky's Theorem in @monskythm.
+
+== Dissections of the Square<dissctsq>
  
 To begin our proof of Monsky's Theorem, we must first define what it means to divide the square, or any polygon, into triangles.
 
 #definition[
-  A _dissection_ of a polygon $P$ is a set of triangles $T$ where $T$ covers $P$ without overlap, and $P$ covers $T$.
+  A _dissection_ of a polygon $P$ is a set of triangles $T$ where $T$ covers $P$, no two triangles in $T$ overlap, and $P$ covers $T$.
 ]
 
 However, this is not the only mathematical structure which divides a polygon into triangles. We will later present another mathematical structure which represents such a division. Dissections consider the problem of the division of polygons into triangles in a geometric sense, as tilings of triangles which both cover and are contained by their respective polygon.
@@ -381,7 +383,7 @@ However, this is not the only mathematical structure which divides a polygon int
   The first example is not a dissection since the square is not completely covered by triangles. The set of triangles also must not contain any overlapping triangles such as in the second example. Finally, in the third example, all of the triangles must be contained within our polygon.
 ]
 
-Monsky's Theorem is interested in a particular subset of dissections of the square, one where triangles are all of equal area, we refer to such a dissection as an _equidissection_.
+Monsky's Theorem is interested in a particular manner of dissecting the square, one where all triangles are of equal area. We refer to such a dissection as an _equidissection_.
 
 #definition[
   An _equidissection_ is a triangulation of a polygon $P$ where all triangles are of equal area. An equidissection containing $n$ triangles is called an $n$-equidissection.
@@ -462,7 +464,7 @@ Notice that all of these equidissections have an even number of triangles. As an
   Any equidissection of the square contains an even number of triangles.
 ]
 
-To find a path towards the proof of such a proposition, we rely on the fact that equidissections are quite fragile. Finding one triangle in a dissection $T$ of a polygon $P$ which has an area which does not evenly divide $P$ proves $T$ is not an equidissection. We can provide an alternative condition for equidissection which takes advantage of this fact.
+To find a path towards the proof of such a proposition, we rely on the fact that equidissections are quite fragile. We have shown a dissection $T$ is not an equidissection if we find any triangle in $T$ which has area which is not equal to any other triangle in $T$. Since we are evenly dividing a polygon $P$ into $n$ triangles of equal area we can restrict this condition further: Finding one triangle in a dissection $T$ of a polygon $P$ which has an area which does not evenly divide $P$ proves $T$ is not an equidissection. We can provide an alternative condition for equidissection which takes advantage of this fact.
 
 #proposition[
   Let $T$ be a dissection of a polygon $P$ with $n$ triangles. Then $T$ is an equidissection if and only if every triangle $t in T$ has area $("Area "P)/n$.
@@ -474,13 +476,13 @@ This allows us to in turn rephrase our statement of Monsky's Theorem to utilize 
   Any dissection of the square $T$ with an odd number of triangles contains at least one triangle $t$ with area not equal to $1/n$.
 ]
 
-The rephrasing of the theorem provides a more forward suggestion for how we should go about our proof. We start with an abitrary dissection $T$ of the square with an odd number of triangles. We then find a triangle in $T$ such that its area is not one of $1/3, 1/5, 1/7, ...$. In the next section we will begin to explore a combinatorial view of this problem. This view will lead us on a path which eventually ends in finding such a triangle in any given dissection.
+The rephrasing of the theorem provides a more forward suggestion for how we should go about our proof. We start with an abitrary dissection $T$ of the square with an odd number of triangles. We then find a triangle in $T$ such that its area is not one of $1/3, 1/5, 1/7, ...$. In the next section we will begin to explore a combinatorial view of this problem. This view will lead us on a path which eventually ends in finding such a triangle in any given dissection.#margin-note[strengthen this transition]
 
-== A Combinatorial Perspective on Dissections
+== A Combinatorial Perspective on Dissections<graphsq>
 
 In the previous section we have presented a geometric definition of the division of polygons into triangles. We will contrast the geometric view presented in the previous section with a combinatorial view of the problem.
 
-We will begin by presenting a combinatorial definition of a polygon.
+Dissections are of polygons, so to present a combinatorial definition of dissection, we must first provide a combinatorial definition of a polygon. First we must ask: what are polygons when represented as a graph?
 
 #let polygon(vertices: 4) = {
   [
@@ -530,7 +532,7 @@ We will define combinatorial polygons as graphs which contain only a cycle of le
   @abrams_integer_2024 A _combinatorial $n$-gon_ is an abstract cycle graph $G$ with $n$ vertices; a _combinatorial polygon_ is a combinatorial $n$-gon for some $n$.
 ]
 
-We will consider triangulations of a combinatorial polygon to simply be any graph whos boundary is a combinatorial polygon, can be plotted on the real plane without intersection, and is made up of combinatorial triangles.
+We will consider triangulations, the combinatorial equivalent of a dissection, of a combinatorial polygon to simply be any graph whos boundary is a combinatorial polygon, can be plotted on the real plane without intersection, and is made up of combinatorial triangles.
 
 #definition[
   @abrams_integer_2024 A _triangulation_ of a combinatorial polygon $G$ consists of a collection $T$ of $3$-element sets called triangles, such that the underlying space $|T|$ built out of triangles is a topological disk with boundary equal to $G$. The boundary vertices are called corners.
@@ -723,7 +725,7 @@ A triangles area is not consistent with an odd equidissection if its $2$-adic va
 
 In the next section we will utilize this property to provide a set of conditions on the vertices of a triangle which show that it cannot be a member of an odd equidissection.
 
-== Coloring the plane
+== Coloring the plane<coloringsection>
 
 In the previous section we introduced the $p$-adic valuation and its properties. We finished by showing that a triangle with an area with non-zero $2$-adic valuation cannot be a member of an odd equidissection. In this section we will find a set of constraints for each vertice of a given triangle which will require the $p$-adic valuation of a triangle to be non-zero. We will divide the real plane into three sets which satisfy these conditions for a given vertex. We will use this division of the real plane into these sets to define a construct known as a coloring over a graph. This graph coloring will allow us to easily determine if a certain triangle in a division of the square into triangles cannot be a member of an odd equidissection.
 
@@ -958,7 +960,7 @@ In the next section we will complete our introduction of lemmas necessary to pro
 //   There exists an $n$-equdissection of the square if and only if $n$ is even.
 // ]
 
-== The Boundary Word
+== The Boundary Word<boundary>
 
 In the previous section, we constructed a coloring on triangulations of the square. Any three colored triangle under this triangulation must have area inconsistent with an odd equidissection of the square. To find a three colored triangle within an arbitrary triangulation of the square we will remove triangles which are not three colored from the square. We have found a three colored triangle if we cannot continue this process until all triangles are removed. We will create a combinatorial object which will simplify this proof into one on a type of object known as a cyclic word.
 
@@ -1173,7 +1175,7 @@ This theorem gives way to the lemma which will provide the final step for our pr
 
 In the next section we will provide a proof of Monsky's Theorem.
 
-== Monsky's Theorem
+== Monsky's Theorem<monskythm>
 
 In summary of this chapter, @threecolor shows that the triangulation which is derived from any given dissection of the square must contain a three coloring. @complete1 shows that any odd dissection of the square with a complete triangle is not an equidissection. The combination of these two theorems gives us our result. We will first provide an odd dissection, and use these theorems to show the dissection cannot be an equidissection.
 
