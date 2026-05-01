@@ -775,7 +775,7 @@ In the next section we will utilize this property to provide a set of conditions
 
 == Coloring the plane<coloringsection>
 
-In the previous section we introduced the $p$-adic valuation and its properties. We finished by showing that a triangle with an area with non-zero $2$-adic valuation cannot be a member of an odd equidissection. In this section we will find a set of constraints for each vertice of a given triangle which will require the $p$-adic valuation of a triangle to be non-zero. We will divide the real plane into three sets which satisfy these conditions for a given vertex. We will use this division of the real plane into these sets to define a construct known as a coloring over a graph. This graph coloring will allow us to easily determine if a certain triangle in a division of the square into triangles cannot be a member of an odd equidissection.
+In the previous section we introduced the $p$-adic valuation and its properties. We finished by showing that a triangle with an area with non-zero $2$-adic valuation cannot be a member of an odd equidissection. In this section we will find a set of constraints for each vertex of a given triangle which will require the $p$-adic valuation of a triangle to be non-zero. We will divide the real plane into three sets which satisfy these conditions for a given vertex. We will use this division of the real plane into these sets to define a construct known as a coloring over a graph. This graph coloring will allow us to easily determine if a certain triangle in a division of the square into triangles cannot be a member of an odd equidissection.
 
 We will begin with the area of a triangle.
 
